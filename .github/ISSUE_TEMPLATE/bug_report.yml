@@ -1,0 +1,118 @@
+name: 🐞 Bug report
+description: Something in Kumix is broken or not working as expected
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug!
+
+        ⚠️ **This issue is public.** Do not paste passwords, API tokens, SSH keys, `.env` contents, server IPs or personal data. Redact screenshots and logs.
+        🔒 Security vulnerabilities must be reported privately to **security@kumix.cloud**, not here.
+
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues and this has not been reported yet
+          required: true
+        - label: I removed all sensitive data (credentials, keys, IPs, personal data) from this report
+          required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected area
+      options:
+        - Servers / VPS
+        - SSH keys
+        - Websites / WordPress
+        - Apps (one-click deploy)
+        - Domains & SSL
+        - Monitoring & alerts
+        - AI assistant
+        - Billing & plans
+        - Teams & permissions
+        - Account, login & 2FA
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: A clear, concise description of the bug.
+      placeholder: When I click "Deploy", the release stays in "Pending" forever.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      placeholder: The release should finish and the app should be reachable.
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error message / logs
+      description: Paste any error message or log output (redacted). It will be formatted as code automatically.
+      render: shell
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or recordings
+      description: Drag and drop images or videos here (redacted).
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: How often does this happen?
+      options:
+        - Every time
+        - Sometimes
+        - Happened once
+    validations:
+      required: true
+
+  - type: input
+    id: server-os
+    attributes:
+      label: Server OS (if relevant)
+      placeholder: Ubuntu 24.04
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser & version (if UI issue)
+      placeholder: Chrome 131 on macOS
+
+  - type: input
+    id: when
+    attributes:
+      label: When did it occur?
+      description: Approximate date and time with timezone — helps us find it in our logs.
+      placeholder: 2026-11-25 14:30 UTC+7
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Anything else that might help (recent changes, workarounds tried, etc.).

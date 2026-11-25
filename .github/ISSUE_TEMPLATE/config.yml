@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 🔒 Report a security vulnerability
+    url: mailto:security@kumix.cloud
+    about: Please report security issues privately by email — never in a public issue.
+  - name: 💬 Account or billing support
+    url: mailto:support@kumix.cloud
+    about: For questions about your account, invoices or private details, email our support team.
+  - name: 🌐 Kumix website
+    url: https://kumix.cloud
+    about: Product information and documentation.
